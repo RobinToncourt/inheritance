@@ -1,7 +1,13 @@
 [package]
-name = "inheritance_macro"
+name = "inheritance"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+proc-macro = true
+
 [dependencies]
-inheritance = { path = "inheritance" }
+proc-macro2 = "1.0.93"
+quote = "1.0.38"
+syn = { version = "2.0.98", features = ["full", "extra-traits"] }
+syn-serde = { version = "0.3.1", features = ["json"] }
